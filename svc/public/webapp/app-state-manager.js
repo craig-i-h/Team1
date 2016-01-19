@@ -54,12 +54,26 @@
                 }
             }
         }).state("home.item", {
-            url: "/item",
-            views: {
-                "home-content": {
-                    templateUrl: "feature/item/item.html"
-                }
-            }
-        })
+                      url: "/item",
+                      views: {
+                          "home-content": {
+                              templateUrl: "feature/item/item.html"
+                          }
+                      }
+        }).state("home.assetadd", {
+                      url: "/asset",
+                      views: {
+                          "home-content": {
+                              templateUrl: "feature/asset/asset-add.html"
+                          }
+                      }
+        }).state("home.assetmanage", {
+                                url: "/asset",
+                                views: {
+                                    "home-content": {
+                                        templateUrl: "feature/asset/asset-index.html"
+                                    }
+                                }
+                  })
     });
 }());
