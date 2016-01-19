@@ -18,7 +18,16 @@ CREATE TABLE item (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE asset (
+    id bigint(20) NOT NULL AUTO_INCREMENT,
+    asset_owner varchar(255) NOT NULL,
+    asset_type varchar(50) NOT NULL,
+    additional_information varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
 # --- !Downs
 
 DROP TABLE project;
 DROP TABLE item;
+DROP TABLE asset;
