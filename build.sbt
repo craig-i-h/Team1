@@ -12,13 +12,13 @@ lazy val svc = (project in file("svc"))
   .settings(endToEndTest:= endToEndTestTask)
   .settings(startPAMM:= startPAMMTask)
   .settings(stopPAMM:= stopPAMMTask)
-  .settings(Keys.test:= customTestTask.value)
+//  .settings(Keys.test:= customTestTask.value)
   .settings(Settings.basicSettings: _*)
   .settings(Settings.serviceSettings: _*)
   .settings(libraryDependencies ++= Seq(
     javaJpa, hibernate, cache, javaWs, evolutions, jdbc
   ) ++ Lib.test(
-    junit
+    junit, mockito
   ))
 
 lazy val testsetup = (project in file("testsetup"))
