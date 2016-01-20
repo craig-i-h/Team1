@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * Created by a585493 on 18/01/2016.
  */
-@Table(name = "item")
+@Table(name = "asset")
 @Entity
 public class AssetEntity {
     @Id
