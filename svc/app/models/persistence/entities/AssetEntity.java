@@ -12,13 +12,13 @@ public class AssetEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "asset-owner", nullable = false)
+    @Column(name = "asset_owner", nullable = false)
     private String assetOwner;
 
-    @Column(name = "asset-type", nullable = false)
+    @Column(name = "asset_type", nullable = false)
     private String assetType;
 
-    @Column(name = "additinoal-info", nullable = false)
+    @Column(name = "additional_information", nullable = false)
     private String additionalInfo;
 
 

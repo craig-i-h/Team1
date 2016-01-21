@@ -41,8 +41,12 @@ public abstract class ResourceEndpoint<T extends Service> extends Controller
     // POST {path}/project
     @Transactional public Result create()
     {
+        logger.info("*****************");
+        logger.info( request().body().asJson().toString());
         JsonNode jsonResponse = service.create(request().body().asJson());
 
+        logger.info("*****************");
+        logger.info( jsonResponse.toString());
         return ok(jsonResponse);
     }
 

@@ -18,9 +18,9 @@ public class WsdsConstants
 
     public static final String ASSET_JSON_ID_PROPERTY = "id";
 
-    public static final String ASSET_JSON_OWNER_PROPERTY = "asset-owner";
+    public static final String ASSET_JSON_OWNER_PROPERTY = "asset_owner";
 
-    public static final String ASSET_JSON_TYPE_PROPERTY = "asset-type";
+    public static final String ASSET_JSON_TYPE_PROPERTY = "asset_type";
 
-    public static final String ASSET_JSON_INFO_PROPERTY = "additional-info";
+    public static final String ASSET_JSON_INFO_PROPERTY = "additional_information";
 }

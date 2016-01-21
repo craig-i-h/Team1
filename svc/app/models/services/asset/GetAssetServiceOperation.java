@@ -14,7 +14,7 @@ import common.util.json.play.JSONHelper;
  */
 public class GetAssetServiceOperation extends ServiceOperation
 {
-   private static final Logger.ALogger logger = Logger.of(GetAssetServiceOperation.class);
+    private static final Logger.ALogger logger = Logger.of(GetAssetServiceOperation.class);
 
     private AssetDao dao;
 
