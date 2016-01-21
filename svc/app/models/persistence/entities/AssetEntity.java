@@ -50,4 +50,7 @@ public class AssetEntity {
     public void setAdditionalInfo(String info) {
         this.additionalInfo = info;
     }
+
+
+
 }
