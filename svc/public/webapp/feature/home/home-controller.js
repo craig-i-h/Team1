@@ -20,6 +20,10 @@
             return $state.is("home.item");
         };
 
+        vm.isAtAsset = function() {
+            return $state.is("home.asset");
+        };
+
         vm.navigateToDashboard = function () {
             $state.go("home.dashboard");
         };
@@ -35,18 +39,17 @@
         vm.navigateToItem = function () {
             $state.go("home.item");
         };
-
-        vm.logout = function () {
-            delete $window.sessionStorage.token;
-            $state.go("login");
-        };
-
         vm.navigateToAddAsset = function () {
                     $state.go("home.assetadd");
         };
 
         vm.navigateToAsset = function () {
             $state.go("home.asset");
+        };
+
+        vm.logout = function () {
+            delete $window.sessionStorage.token;
+            $state.go("login");
         };
     }
 }());
