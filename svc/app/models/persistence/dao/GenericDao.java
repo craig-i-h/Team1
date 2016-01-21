@@ -12,7 +12,7 @@ public abstract class GenericDao<T> extends GenericReadOnlyDao<T>
         super(emp);
     }
 
-    public final T create(final T t)
+    public  T create(final T t)
     {
         try
         {
@@ -30,7 +30,7 @@ public abstract class GenericDao<T> extends GenericReadOnlyDao<T>
         return t;
     }
 
-    public final void delete(final Object id)
+    public void delete(final Object id)
     {
         getEntityManager().remove(getEntityManager().getReference(type, id));
     }

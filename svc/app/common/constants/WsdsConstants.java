@@ -15,4 +15,12 @@ public class WsdsConstants
     public static final String PROJECT_JSON_TITLE_PROPERTY = "title";
 
     public static final String PROJECT_JSON_SUMMARY_PROPERTY = "summary";
+
+    public static final String ASSET_JSON_ID_PROPERTY = "id";
+
+    public static final String ASSET_JSON_OWNER_PROPERTY = "asset-owner";
+
+    public static final String ASSET_JSON_TYPE_PROPERTY = "asset-type";
+
+    public static final String ASSET_JSON_INFO_PROPERTY = "additional-info";
 }

@@ -23,7 +23,7 @@ public class AssetDaoTestBuilder {
 
     private Query query;
 
-    private List<AssetEntity> resultList;
+        private List<AssetEntity> resultList;
 
     void createTestObjects() {
         emp = Mockito.mock(EntityManagerProvider.class);

@@ -27,18 +27,14 @@ public abstract class GenericReadOnlyDao<T>
         type = (Class) pt.getActualTypeArguments()[0];
     }
 
-    public final T find(Object id)
+    public T find(Object id)
     {
         return (T) getEntityManager().find(type, id);
     }
 
     public List<T> list()
     {
-        logger.info("Getting List of " + type.getSimpleName());
-
         String query = "Select e from " + type.getSimpleName() + " e";
-
-        logger.info("List query " + query);
 
         return getEntityManager().createQuery(query).getResultList();
     }
