@@ -40,5 +40,13 @@
             delete $window.sessionStorage.token;
             $state.go("login");
         };
+
+        vm.navigateToAddAsset = function () {
+                    $state.go("home.assetadd");
+        };
+
+        vm.navigateToAsset = function () {
+            $state.go("home.asset");
+        };
     }
 }());
