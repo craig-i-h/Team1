@@ -6,12 +6,11 @@
 
     function AssetDal (dal) {
 
-        this.getAssets = function () {
+        this.getAsset = function () {
             return dal.http.GET("asset");
         };
 
         this.saveAsset = function (assetToSave) {
-            assetToSave.status = "In progress";
             return dal.http.POST("asset", assetToSave);
         };
 

@@ -3,7 +3,7 @@
 (function () {
 
     angular.module('app')
-        .controller("assetAddController",
+        .controller("assetFormController",
         ["$log", "assetRepository", "$state", AssetFormCtrl]);
 
     function AssetFormCtrl($log, assetRepository, $state) {
