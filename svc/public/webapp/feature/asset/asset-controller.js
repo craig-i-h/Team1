@@ -11,8 +11,10 @@
 
         vm.controllerName = "assetController";
 
-        assetRepository.getAssets().then(function (results) {
-             vm.projects = results;
+        assetRepository.getAsset().then(function (results) {
+        console.log("***CONTROLLER in success the value of results is***");
+                            console.log(results);
+             vm.asset = results;
          }, function (error) {
              vm.error = true;
              vm.errorMessage = error;

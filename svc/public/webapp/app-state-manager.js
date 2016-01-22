@@ -64,10 +64,10 @@
                       url: "/asset",
                       views: {
                           "home-content": {
-                              templateUrl: "feature/asset/asset-add.html"
+                              templateUrl: "feature/asset/asset-form.html"
                           }
                       }
-        }).state("home.assetmanage", {
+        }).state("home.asset", {
                                 url: "/asset",
                                 views: {
                                     "home-content": {

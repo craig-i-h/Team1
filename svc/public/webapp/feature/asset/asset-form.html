@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="panel panel-default asset-panel-heading" data-ng-controller="assetFormController as assetFormCtrl">
+    <div class="panel-heading ">Sample - Add New Asset</div>
+    <form class="panel-body container" name="assetForm"
+          data-ng-submit="assetFormCtrl.saveAsset(assetForm)" method="post" novalidate="novalidate">
+        <div class="row">
 
-</body>
-</html>-
+            <div class='form-group'>
+                <label for="asset_owner">Asset Owner:</label>
+                <input type="text" class="form-control" data-ng-model="assetFormCtrl.asset.asset_owner" placeholder="Asset Owner"
+                       id="asset_owner"
+                       required>
+            </div>
+
+            <div class='form-group'>
+                <label for="asset_type">Asset Type :</label>
+          <textarea class="form-control" rows="3" data-ng-model="assetFormCtrl.asset.asset_type" placeholder="Asset Type"
+                    id="asset_type"></textarea>
+            </div>
+
+            <div class='form-group'>
+                <label for="additional_information">Additional Information :</label>
+          <textarea class="form-control" rows="2" data-ng-model="assetFormCtrl.asset.additional_information" placeholder="Additional Information"
+                    id="additional_information"></textarea>
+            </div>
+
+        </div>
+
+        <div class="pull-right">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" data-ng-click="assetFormCtrl.cancel(assetForm)" class="btn btn-cancel">Cancel</button>
+        </div>
+
+    </form>
+
+</div>

@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="container-fluid asset-results " data-ng-controller="assetController as assetCtrl">
+    {{assetCtrl.asset}}
+        <h3>Asset List - this page lists all the elements retrieved from repository</h3>
+        <hr>
+        <section data-ng-repeat="asset in assetCtrl.asset | orderBy: 'id' track by $index"
+                 data-ng-controller="assetItemController as assetItemCtrl "  class="row panel panel-default">
+            <div class="panel-heading">
+                <button class="btn btn-danger btn-sm glyphicon glyphicon-remove" title="Delete this asset"
+                        data-ng-click="assetItemCtrl.delete(asset)"></button>
+                {{assetCtrl.asset}}
+                 ID: {{asset.id}} - Owner: {{asset.asset_owner}} - Type: {{asset.asset_type}} -
+                <small>Additional Information: {{asset.additional_information}}</small>
+            </div>
+            <div class="panel-body">{{asset.additional_information}}</div>
+        </section>
+</div>

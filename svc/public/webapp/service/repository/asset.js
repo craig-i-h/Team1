@@ -11,12 +11,13 @@
         console.log("This is asset cache");
 
 
-        this.getAssets = function (criteria) {
+        this.getAsset = function (criteria) {
             $log.debug("Repository:Asset getAsset");
 
             var deferred = $q.defer();
             assetDal.getAsset(criteria).then(function (results) {
-
+            console.log("***Repository in success the value of results is***");
+                    console.log(results);
                 assetCache = results;
                 deferred.resolve(results);
             }, function (error) {
@@ -37,7 +38,7 @@
             $log.debug("isUpdate = " + isUpdate);
             $log.debug(JSON.stringify(assetToSave));
 
-            passetDal.saveAsset(assetToSave).then(function (asset) {
+            assetDal.saveAsset(assetToSave).then(function (asset) {
 
                 if (!isUpdate) {
                     assetCache.push(asset);

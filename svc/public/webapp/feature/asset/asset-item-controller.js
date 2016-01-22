@@ -3,7 +3,7 @@
 (function () {
 
     angular.module('app')
-        .controller("AssetItemController",
+        .controller("assetItemController",
         ["$state", "assetRepository", AssetItemCtrl]);
 
     function AssetItemCtrl($state, assetRepository) {
