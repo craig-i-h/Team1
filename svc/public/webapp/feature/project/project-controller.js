@@ -1,21 +1,21 @@
 "use strict";
 
-(function () {
+     (function () {
 
-    angular.module('app')
-        .controller("projectController",
-        ["projectRepository", ProjectCtrl]);
+         angular.module('app')
+             .controller("projectController",
+             ["projectRepository", ProjectCtrl]);
 
-    function ProjectCtrl(projectRepository ) {
-        var vm = this;
+         function ProjectCtrl(projectRepository ) {
+             var vm = this;
 
-        vm.controllerName = "projectController";
+             vm.controllerName = "projectController";
 
-        projectRepository.getProjects().then(function (results) {
-             vm.projects = results;
-         }, function (error) {
-             vm.error = true;
-             vm.errorMessage = error;
-         });
-    }
-}());
+             projectRepository.getProjects().then(function (results) {
+                  vm.projects = results;
+              }, function (error) {
+                  vm.error = true;
+                  vm.errorMessage = error;
+              });
+         }
+     }());
